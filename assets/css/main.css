@@ -647,6 +647,22 @@ input[type=radio] + label:before {
   }
 }
 
+.single-img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+.header-image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.header-image img {
+  max-width: 100%;
+}
+
 /* List */
 ol {
   list-style: decimal;
@@ -1450,6 +1466,10 @@ body.is-article-visible #footer {
 }
 body.is-preload #footer {
   opacity: 0;
+}
+
+.d-none {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

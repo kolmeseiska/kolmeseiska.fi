@@ -84,4 +84,20 @@
 				margin: (_size(element-margin) * 0.75) 0;
 			}
 		}
-	}
+  }
+  
+  .single-img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .header-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+    }
+  }

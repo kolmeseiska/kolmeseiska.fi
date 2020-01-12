@@ -15,8 +15,8 @@
 		@include vendor('flex-direction', 'column');
 		position: relative;
 		max-width: 100%;
-		z-index: 3;
-
+    z-index: 3;
+    
 		article {
 			@include vendor('transform', 'translateY(0.25rem)');
 			@include vendor('transition', (
