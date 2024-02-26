@@ -1,0 +1,82 @@
+:root {
+  --content-width: 68ch;
+  /* --shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a; */
+  /* --shadow-colored: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color); */
+  --shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+  --shadow-colored: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(images/noisy-background.jpg);
+  background-size: 500px;
+  background-color: rgb(123 31 128);
+  background-blend-mode: color-burn;
+  font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.25rem;
+
+  display: flex;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background-color: rgb(244, 241, 247);
+}
+
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 #0000, 0 0 #0000, var(--shadow);
+}
+
+.text-accent {
+  color: #711375;
+}
+
+.anniversary {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.anniversary_title {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+  color: #711375;
+  position: relative;
+}
+
+.ornament {
+  flex: 1;
+  background-image: url(images/37_koynnos.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center left;
+}
+
+.ornament.left {
+  transform: scaleX(-1);
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+  filter: brightness(10%);
+}
