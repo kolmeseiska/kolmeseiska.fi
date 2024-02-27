@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  background-image: url(images/noisy-background.jpg);
+  background-image: url(images/noisy-background.webp);
   background-size: 500px;
   background-color: rgb(123 31 128);
   background-blend-mode: color-burn;
@@ -65,7 +65,7 @@ main {
 
 .ornament {
   flex: 1;
-  background-image: url(images/37_koynnos.png);
+  background-image: url(images/37_koynnos.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center left;
