@@ -65,13 +65,19 @@ main {
 
 .ornament {
   flex: 1;
-  background-image: url(images/37_koynnos.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center left;
 }
 
-.ornament.left {
+.ornament_vine1 {
+  background-image: url(images/37_koynnos.webp);
+}
+.ornament_vine2 {
+  background-image: url(images/37_koynnos.webp);
+}
+
+.flip-vertically {
   transform: scaleX(-1);
 }
 
