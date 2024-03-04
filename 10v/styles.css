@@ -1,5 +1,6 @@
 :root {
   --content-width: 68ch;
+  --content-width-min: 38ch;
   /* --shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a; */
   /* --shadow-colored: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color); */
   --shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
@@ -28,10 +29,11 @@ body {
 }
 
 main {
-  width: 100%;
+  width: 90%;
+  min-width: 280px;
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 5rem 0.5rem;
+  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,13 +54,15 @@ main {
 .anniversary {
   display: flex;
   gap: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .anniversary_title {
   font-family: "Satisfy", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 5rem;
+  font-size: clamp(2rem, 10vw, 5rem);
   color: #711375;
   position: relative;
 }
@@ -82,24 +86,32 @@ main {
 }
 
 .header-image img {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   max-height: 200px;
   filter: brightness(0.1);
 }
 
-.animation-entrance {
-  opacity: 0;
-  animation: entrance 1000ms ease-out 400ms 1 normal forwards;
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes entrance {
+    0% {
+      opacity: 0;
+      transform: perspective(30rem) rotateX(3deg) translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animation-entrance {
+    opacity: 0;
+    animation: entrance 1000ms ease-out 400ms 1 normal forwards;
+  }
 }
 
-@keyframes entrance {
-	0% {
-		opacity: 0;
-    transform: perspective(30rem) rotateX(3deg) translateY(-1rem);
-	}
 
-	100% {
-		opacity: 1;
-	}
+
+@media (max-width: 660px) {
+  p {
+    font-size: 0.8em;
+  }
 }
