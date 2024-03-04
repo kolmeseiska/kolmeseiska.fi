@@ -1,6 +1,5 @@
 :root {
-  --content-width: 68ch;
-  --content-width-min: 38ch;
+  --content-width: 50rem;
   /* --shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a; */
   /* --shadow-colored: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color); */
   --shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
@@ -9,7 +8,7 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -40,6 +39,11 @@ main {
   text-align: center;
 
   background-color: rgb(244, 241, 247);
+}
+
+section {
+  max-width: 58ch;
+  margin: 0 auto;
 }
 
 .card {
@@ -92,11 +96,20 @@ main {
   filter: brightness(0.1);
 }
 
+.custom-shape-divider-top-1709581611 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   @keyframes entrance {
     0% {
       opacity: 0;
-      transform: perspective(30rem) rotateX(3deg) translateY(-1rem);
+      transform: perspective(30rem) rotateX(1deg) translateY(-1rem);
     }
     100% {
       opacity: 1;
@@ -108,10 +121,8 @@ main {
   }
 }
 
-
-
 @media (max-width: 660px) {
-  p {
+  html {
     font-size: 0.8em;
   }
 }
