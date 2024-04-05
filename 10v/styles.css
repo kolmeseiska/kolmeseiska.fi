@@ -1,9 +1,12 @@
 :root {
   --content-width: 50rem;
+  --content-width-small: 25rem;
   /* --shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a; */
   /* --shadow-colored: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color); */
   --shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
   --shadow-colored: 0 20px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
+
+  --gap: 1rem;
 }
 
 html,
@@ -22,33 +25,43 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 1.25rem;
-
   display: flex;
   align-items: center;
 }
 
 main {
-  width: 90%;
   min-width: 280px;
-  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  background-color: rgb(244, 241, 247);
+  gap: var(--gap);
+  align-items: center;
 }
 
 section {
-  max-width: 58ch;
+  max-width: 50ch;
   margin: 0 auto;
 }
 
 .card {
   border-radius: 0.25rem;
   box-shadow: 0 0 #0000, 0 0 #0000, var(--shadow);
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(244, 241, 247);
+  width: fit-content;
+  max-width: var(--content-width);
+}
+
+.split {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .text-accent {
@@ -125,4 +138,30 @@ section {
   html {
     font-size: 0.8em;
   }
+}
+
+/* Utils */
+.text-left {
+  text-align: left;
+}
+
+.toggle {
+  cursor: pointer;
+}
+.toggle__input {
+  display: none;
+}
+
+.simple-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms;
+}
+
+.toggle__input:checked+.simple-collapse {
+  grid-template-rows: 1fr;
+}
+
+.simple-collapse > div {
+  overflow: hidden;
 }
